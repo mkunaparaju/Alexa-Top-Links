@@ -34,8 +34,8 @@ public class AlexaCrawler {
 		this.baseURL = "http://www.alexa.com/topsites/global;";
 		this.pageCount = 0;
 		this.topN = topN;
-		linksList = new ArrayList();
-		URLQueue = new LinkedList();
+		linksList = new ArrayList<String>();
+		URLQueue = new LinkedList<String>();
 		URLQueue.add(baseURL + pageCount);
 	}
 	
@@ -92,7 +92,6 @@ public class AlexaCrawler {
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
