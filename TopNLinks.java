@@ -34,7 +34,7 @@ public class TopNLinks {
 		
 		if(topN > 500)
 		{
-			System.out.println("Max number of sites shown in Alexa is 500. Please choose a number blow that");
+			System.out.println("Max number of sites shown in Alexa is 500. Please choose a number below that");
 			return;
 		}
 		
