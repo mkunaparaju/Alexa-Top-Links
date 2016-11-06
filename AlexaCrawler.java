@@ -24,11 +24,11 @@ public class AlexaCrawler {
 	 * 
 	 */
 	
-	String baseURL;
-	int pageCount;
-	int topN;
-	Queue<String> URLQueue;
-	List<String> linksList;
+	private String baseURL;
+	private int pageCount;
+	private int topN;
+	private Queue<String> URLQueue;
+	private List<String> linksList;
 	AlexaCrawler(int topN)
 	{
 		this.baseURL = "http://www.alexa.com/topsites/global;";
@@ -62,7 +62,8 @@ public class AlexaCrawler {
 	 * constructs the URLQueue
 	 * calls the method which adds links to lists
 	 * the thread sleeps for 20 seconds between calls to the website;
-	 * Note: during the course of writing this program, I had accidentally gone into an infinite loop, which sent too many requests to the website
+	 * Note: during the course of writing this program, I had accidentally gone into an infinite loop
+	 * This sent too many requests to the website
 	 * as a result I no longer have access to the website from my IP address
 	 * thread.sleep will avoid this presently for anyone else executing the program
 	 * 
@@ -96,9 +97,10 @@ public class AlexaCrawler {
 			}
 		}
 	}
-	/*
+	/** 
 	 * parses the html and adds the website names to a list
 	 */
+	
 	
 	void addLinkstoList(Elements elemList)
 	{
@@ -117,11 +119,11 @@ public class AlexaCrawler {
 				printCount++;		
 			}
 	}
-		
-	/*
-	 * 
-	 * @return ArrayList of website names to be printed 
+	
+	/** 
+	 * @return ArrayList of website names to be printed
 	 */
+	
 	List<String> getLinksList()
 	{
 		return linksList;

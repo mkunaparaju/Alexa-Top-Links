@@ -6,9 +6,7 @@
  * @author mkunaparaju
  *
  */
-import java.util.List;
-import java.util.Scanner;
-
+import java.util.*;
 public class TopNLinks {
 
 	/**
@@ -18,12 +16,22 @@ public class TopNLinks {
 	/**
 	 * The main method; takes the input from stdin and prints output to stdout 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		//takes input from command line
 		System.out.println("Please enter the number of Websites you want listed:");
 		Scanner scan = new Scanner(System.in);
+		int topN =0;
 		
-		int topN = scan.nextInt();
+		try
+		{
+			topN = scan.nextInt();	
+		}
+		catch(InputMismatchException ie)
+		{
+			System.out.println("Please enter a valid number");
+		}
+		
 		if(topN > 500)
 		{
 			System.out.println("Max number of sites shown in Alexa is 500. Please choose a number blow that");
